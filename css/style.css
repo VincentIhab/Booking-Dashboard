@@ -1,0 +1,225 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+  --color-Grey-light-1: #faf9f9;
+  --color-Grey-light-2: #f4f2f2;
+  --color-Grey-light-3: #f0eeee;
+  --color-Grey-light-4: #ccc;
+  --color-Grey-dark-1: #333;
+  --color-Grey-dark-2: #777;
+  --color-Grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --border-radius-round: 12.5px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-Grey-dark-1);
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 100%;
+  margin: 2rem 4rem;
+  background-color: transparent;
+  border-radius: var(--border-radius-round);
+  min-height: 50rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-radius: var(--border-radius-round);
+  border-bottom: var(--color-Grey-light-2);
+  box-shadow: var(--shadow-dark);
+  margin-bottom: 1rem;
+  padding: 0 0rem 0rem 3rem;
+}
+
+.contant {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-Grey-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-dark);
+  margin-right: 1rem;
+  flex: 0 0 18%;
+  border-radius: var(--border-radius-round);
+}
+
+.hotel-view {
+  background-color: #fff;
+  box-shadow: var(--shadow-dark);
+  flex: 1;
+  height: 100vh;
+  border-radius: var(--border-radius-round);
+}
+
+.logo {
+  height: 3.2rem;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--color-Grey-light-2);
+  border: none;
+  color: inherit;
+  padding: 0.7rem 2rem;
+  border-radius: var(--border-radius-round);
+  width: 90%;
+  transition: all 0.2s;
+  margin-right: -2.5rem;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: var(--color-Grey-light-3);
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: var(--color-Grey-light-4);
+}
+.search__input:focus + .search__button {
+  background-color: var(--color-Grey-light-3);
+}
+.search__button {
+  border: none;
+  background-color: var(--color-Grey-light-2);
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(2px);
+}
+.search__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-Grey-dark-2);
+}
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+.user-nav > *:hover {
+  background-color: var(--color-Grey-light-2);
+  border-radius: 10%;
+}
+.user-nav__icon-box {
+  position: relative;
+}
+.user-nav__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: var(--color-Grey-dark-2);
+}
+.user-nav__notification {
+  font-size: 0.8rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+  color: #fff;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-nav__user {
+  padding-right: 3rem;
+}
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.side-nav__item {
+  list-style: none;
+}
+.side-nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  margin: 1.5rem 0 0 3rem;
+  height: 5rem;
+}
+.side-nav__icon {
+  width: 1.75rem;
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-Grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+.logo {
+  height: 3.2rem;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-Grey-light-2);
+    border: none;
+    color: inherit;
+    padding: 0.7rem 2rem;
+    border-radius: var(--border-radius-round);
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -2.5rem;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-Grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-Grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-Grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-Grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-Grey-dark-2);
+  }
+}
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in;
+  }
+  & > *:hover {
+    background-color: var(--color-Grey-light-2);
+    border-radius: 10%;
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    fill: var(--color-Grey-dark-2);
+  }
+
+  &__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+    padding-right: 3rem;
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+  }
+}
+
+.side-nav {
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    margin: 1.5rem 0 0 3rem;
+    height: 5rem;
+  }
+
+  &__icon {
+    width: 1.75rem;
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-Grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
