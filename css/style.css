@@ -32,7 +32,7 @@ Grey dark 3: #999
   --color-Grey-dark-2: #777;
   --color-Grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --border-radius-round: 12.5px;
+  --border-radius-round: 6px;
 }
 
 *,
@@ -52,7 +52,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-Grey-dark-1);
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary));
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -75,7 +75,7 @@ body {
   border-radius: var(--border-radius-round);
   border-bottom: var(--color-Grey-light-2);
   box-shadow: var(--shadow-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding: 0 0rem 0rem 3rem;
 }
 
@@ -89,7 +89,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--shadow-dark);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   flex: 0 0 18%;
   border-radius: var(--border-radius-round);
 }
@@ -98,7 +98,7 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-dark);
   flex: 1;
-  height: 100vh;
+  height: 88rem;
   border-radius: var(--border-radius-round);
 }
 
@@ -200,19 +200,52 @@ body {
   margin: 0 1rem;
 }
 
-.side-nav__item {
+.side-nav {
+  font-size: 1.4rem;
   list-style: none;
+  margin-top: 3.5rem;
 }
-.side-nav__link {
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 3px;
+  border-radius: 0 9px 9px 0;
+  background-color: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s ease-out 0.5s, background-color 0.1s;
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 90%;
+}
+.side-nav__item:active::before {
+  background-color: var(--color-primary-light);
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-Grey-light-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  text-align: left;
-  margin: 1.5rem 0 0 3rem;
-  height: 5rem;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
 }
 .side-nav__icon {
   width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 2.5rem;
+  fill: currentColor;
 }
 
 .legal {
@@ -220,6 +253,16 @@ body {
   color: var(--color-Grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery:last-child {
+  border-radius: 100px;
+}
+.gallery__photo {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

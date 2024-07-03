@@ -33,7 +33,7 @@ Grey dark 3: #999
   --color-Grey-dark-2: #777;
   --color-Grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --border-radius-round: 12.5px;
+  --border-radius-round: 6px;
 }
 
 *,
@@ -55,8 +55,8 @@ body {
   color: var(--color-Grey-dark-1);
   background-image: linear-gradient(
     to right bottom,
-    var(--color-primary-light),
-    var(--color-primary-dark)
+    var(--color-primary-dark),
+    var(--color-primary)
   );
   background-repeat: no-repeat;
   background-size: cover;
