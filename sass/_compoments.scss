@@ -130,7 +130,8 @@
     border-radius: 0 9px 9px 0;
     background-color: var(--color-primary);
     transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s ease-out 0.5s, background-color 0.1s;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
   }
 
   &__item:hover::before,
@@ -173,14 +174,86 @@
 
 .gallery {
   display: flex;
+  overflow: hidden;
 
-  &:last-child {
-    border-radius: 100px;
-  }
+  border-radius: 16px;
   &__item {
   }
 
   &__photo {
     width: 100%;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-Grey-light-2);
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.6rem 3.1rem;
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-loaction {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &__rating {
+  }
+
+  &__btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    background-color: transparent;
+    padding-bottom: 2px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      border-bottom: 1px solid var(--color-Grey-dark-1);
+    }
+    &:focus {
+      outline: none;
+      animation: Button 1s infinite;
+    }
+  }
+
+  &__rating-average {
+  }
+
+  &__rating-count {
+  }
+}
+
+@keyframes Button {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
   }
 }

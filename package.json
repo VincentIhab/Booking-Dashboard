@@ -4,7 +4,7 @@
   "description": "Landing page for Trillo",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass -w sass/main.scss css/style.css",
+    "watch:sass": "sass -w sass/main.scss:css/style.css",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
