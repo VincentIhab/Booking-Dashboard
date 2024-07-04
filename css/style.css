@@ -32,7 +32,9 @@ Grey dark 3: #999
   --color-Grey-dark-2: #777;
   --color-Grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.08);
   --border-radius-round: 16px;
+  --border: 1px solid var(--color-Grey-light-2);
 }
 
 *,
@@ -73,7 +75,7 @@ body {
   font-size: 1.4rem;
   background-color: #fff;
   border-radius: var(--border-radius-round);
-  border-bottom: 1px solid var(--color-Grey-light-2);
+  border-bottom: var(--border);
   box-shadow: var(--shadow-dark);
   margin-bottom: 0.5rem;
   padding: 0 0rem 0rem 3rem;
@@ -100,6 +102,26 @@ body {
   flex: 1;
   height: 88rem;
   border-radius: var(--border-radius-round);
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-Grey-light-2);
+  border-bottom: var(--border);
+}
+
+.description {
+  background-color: rgb(236, 236, 236);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-light);
+}
+
+.user-reviews {
+  background-color: brown;
+  flex: 1;
 }
 
 .logo {
@@ -258,7 +280,7 @@ body {
 .gallery {
   display: flex;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 16px;
 }
 .gallery__photo {
   width: 100%;
@@ -268,10 +290,11 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-Grey-light-2);
+  border-bottom: var(--border);
+  font-size: 1.7rem;
 }
 .overview__heading {
-  font-size: 2.25rem;
+  font-size: 3rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -285,6 +308,27 @@ body {
   width: 1.75rem;
   height: 1.75rem;
   fill: var(--color-primary);
+}
+.overview__location {
+  font-size: 1.2rem;
+  display: flex;
+  vertical-align: center;
+}
+.overview__icon-loaction {
+  margin-right: 0.5rem;
+}
+.overview__rating {
+  background-color: var(--color-primary);
+  color: #fff;
+  margin-left: 3rem;
+  align-self: center;
+  padding: 0 2.25rem;
+  align-self: stretch;
+  border-radius: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .overview__btn-inline {
   border: none;
@@ -304,6 +348,16 @@ body {
   outline: none;
   animation: Button 1s infinite;
 }
+.overview__rating-average {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: -3px;
+}
+.overview__rating-count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
 @keyframes Button {
   0% {
     transform: scale(1);

@@ -176,7 +176,7 @@
   display: flex;
   overflow: hidden;
 
-  border-radius: 16px;
+  border-radius: 16px 16px 0 16px;
   &__item {
   }
 
@@ -189,9 +189,11 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-Grey-light-2);
+  border-bottom: var(--border);
+
+  font-size: 1.7rem;
   &__heading {
-    font-size: 2.25rem;
+    font-size: 3rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -212,9 +214,27 @@
   }
 
   &__location {
+    font-size: 1.2rem;
+    display: flex;
+    vertical-align: center;
+  }
+
+  &__icon-loaction {
+    margin-right: 0.5rem;
   }
 
   &__rating {
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: center;
+    padding: 0 2.25rem;
+    align-self: stretch;
+    border-radius: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__btn-inline {
@@ -237,9 +257,14 @@
   }
 
   &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
   }
 
   &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
 }
 
